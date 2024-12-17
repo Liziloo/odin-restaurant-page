@@ -1,3 +1,5 @@
+import './comeau-reset.css';
+import './styles.css';
 import { homepage } from './home.js';
 import { menuPage } from './menu.js';
 import { aboutPage } from './about.js';
