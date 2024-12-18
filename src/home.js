@@ -3,6 +3,7 @@ import syrup from './syrup.png';
 
 export const homepage = () => {
     const contentDiv = document.querySelector('#content');
+    const homePageDiv = document.createElement('div');
 
     const homeTitleDiv = document.createElement('div');
     const homeTitle = document.createElement('h1');
@@ -66,11 +67,12 @@ export const homepage = () => {
 
     const optionsDiv = document.createElement('div');
     const optionsText = document.createElement('p');
-    optionsText.textContent = "Pancakes not your thing? Don't worry, we have plenty of other offerings on our full menu.";
+    optionsText.innerHTML = "Pancakes not your thing? Don't worry, we have plenty of other offerings on our <span id='menu-link'>full menu</span>.";
     optionsDiv.appendChild(optionsText);
 
     const footerDiv = document.createElement('div');
     footerDiv.innerHTML = "Image by <a href='https://pixabay.com/users/duckahouse-7364164/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941'>DuckaHouse</a> from <a href='https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941'>Pixabay</a>";
 
-    contentDiv.append(homeTitleDiv, homePicDiv, subheadingDiv, stepsDiv, optionsDiv, footerDiv);
+    homePageDiv.append(homeTitleDiv, homePicDiv, subheadingDiv, stepsDiv, optionsDiv, footerDiv);
+    contentDiv.appendChild(homePageDiv);
 };
