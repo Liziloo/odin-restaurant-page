@@ -57,10 +57,20 @@ export const homepage = () => {
     const step3Para = document.createElement('p');
     step3Para.classList.add('step-text');
     step3Para.textContent = "Finish off your custom stack with anything from boysenberry syrup, to fresh strawberries, to rainbow sprinkles. And don't forget a big ol' dollop of our homemade whipped cream!";
-    step3Div.append(step3Heading, step3Para);
-
+    const step3Pic = document.createElement('img');
+    step3Pic.classList.add('drip');
+    step3Pic.src = syrup;
+    step3Div.append(step3Heading, step3Para, step3Pic);
 
     stepsDiv.append(step1Div, step2Div, step3Div);
 
-    contentDiv.append(homeTitleDiv, homePicDiv, subheadingDiv, stepsDiv);
+    const optionsDiv = document.createElement('div');
+    const optionsText = document.createElement('p');
+    optionsText.textContent = "Pancakes not your thing? Don't worry, we have plenty of other offerings on our full menu.";
+    optionsDiv.appendChild(optionsText);
+
+    const footerDiv = document.createElement('div');
+    footerDiv.innerHTML = "Image by <a href='https://pixabay.com/users/duckahouse-7364164/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941'>DuckaHouse</a> from <a href='https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941'>Pixabay</a>";
+
+    contentDiv.append(homeTitleDiv, homePicDiv, subheadingDiv, stepsDiv, optionsDiv, footerDiv);
 };
