@@ -1,5 +1,5 @@
-import pancakePile from './pancake-stack.png';
-import syrup from './syrup-drip.png';
+import pancakePile from './assets/pancake-stack.png';
+import syrup from './assets/syrup-drip.png';
 
 export const homepage = () => {
     const contentDiv = document.querySelector('#content');

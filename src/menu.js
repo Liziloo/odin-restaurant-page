@@ -1,4 +1,4 @@
-import rightArrow from './arrow-right-bold.svg';
+import rightArrow from './assets/arrow-right-bold.svg';
 
 const batters = ['buttermilk', 'chocolate', 'strawberry', 'lemon ricotta', 'cinnamon swirl', 'current seasonal'];
 const insides = ['bacon', 'chocolate chips', 'blueberries', 'raspberries', 'cinnamon chips', 'peanut butter chips'];
