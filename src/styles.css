@@ -17,6 +17,10 @@
     font-family: 'aliceregular'
 }
 
+body {
+    min-height: 100vh;
+}
+
 header {
     position: sticky;
     display: grid;
@@ -51,6 +55,7 @@ button {
 
 #content {
     width: 100vw;
+    min-height: 85vh;
     padding: 25px;
     background-color: var(--lavender-web);
 }
@@ -175,4 +180,8 @@ li {
 #more {
     display: grid;
     grid-auto-flow: column;
+}
+
+#about-page {
+    height: 100%;
 }

@@ -1,6 +1,7 @@
 export const aboutPage = () => {
     const contentDiv = document.querySelector('#content');
     const aboutDiv = document.createElement('div');
+    aboutDiv.id = 'about-page';
 
     const aboutTitleDiv = document.createElement('div');
     const aboutTitle = document.createElement('h1');
