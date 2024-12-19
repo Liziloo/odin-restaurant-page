@@ -1,5 +1,5 @@
-import pancakePile from './dorayaki-3943941_1280.png';
-import syrup from './syrup.png';
+import pancakePile from './pancake-stack.png';
+import syrup from './syrup-drip.png';
 
 export const homepage = () => {
     const contentDiv = document.querySelector('#content');
