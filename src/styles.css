@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'aliceregular';
+    src: url('fonts/alice-regular-webfont.woff2') format('woff2'),
+         url('fonts/alice-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --ultra-violet: #6458a6ff;
     --light-ultra-violet: rgb(198, 194, 219);
@@ -6,6 +14,7 @@
     --skobeloff: #0b7a75;
     --fawn: #ffb86f;
     --light-fawn: #fde3c9;
+    font-family: 'aliceregular'
 }
 
 header {
