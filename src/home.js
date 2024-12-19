@@ -4,11 +4,7 @@ import syrup from './syrup.png';
 export const homepage = () => {
     const contentDiv = document.querySelector('#content');
     const homePageDiv = document.createElement('div');
-
-    const homeTitleDiv = document.createElement('div');
-    const homeTitle = document.createElement('h1');
-    homeTitle.textContent = "Finnick's Pancake Factory";
-    homeTitleDiv.appendChild(homeTitle);
+    homePageDiv.id = 'home';
 
     const homePicDiv = document.createElement('div');
     const homePic = document.createElement('img');
@@ -51,7 +47,7 @@ export const homepage = () => {
     step2Div.append(step2Heading, step2Para, step2Pic);
 
     const step3Div = document.createElement('div');
-    step2Div.classList.add('step');
+    step3Div.classList.add('step');
     const step3Heading = document.createElement('h3');
     step3Heading.classList.add('step-heading');
     step3Heading.textContent = 'Choose your outsides';
@@ -71,8 +67,9 @@ export const homepage = () => {
     optionsDiv.appendChild(optionsText);
 
     const footerDiv = document.createElement('div');
-    footerDiv.innerHTML = "Image by <a href='https://pixabay.com/users/duckahouse-7364164/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941'>DuckaHouse</a> from <a href='https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941'>Pixabay</a>";
+    footerDiv.id = 'footer';
+    footerDiv.innerHTML = 'Image by <a href="https://pixabay.com/users/duckahouse-7364164/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941">DuckaHouse</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941">Pixabay</a>';
 
-    homePageDiv.append(homeTitleDiv, homePicDiv, subheadingDiv, stepsDiv, optionsDiv, footerDiv);
+    homePageDiv.append(homePicDiv, subheadingDiv, stepsDiv, optionsDiv, footerDiv);
     contentDiv.appendChild(homePageDiv);
 };
