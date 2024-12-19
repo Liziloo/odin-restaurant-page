@@ -1,3 +1,5 @@
+import rightArrow from './arrow-right-bold.svg';
+
 const batters = ['buttermilk', 'chocolate', 'strawberry', 'lemon ricotta', 'cinnamon swirl', 'current seasonal'];
 const insides = ['bacon', 'chocolate chips', 'blueberries', 'raspberries', 'cinnamon chips', 'peanut butter chips'];
 const outsides = ['homemade whipped cream', 'fresh strawberries', 'chocolate chips', 'berry compote', 'applesauce', 'creme brulee sauce', 'rainbow sprinkles', 'Jimmies (chocolate sprinkles)'];
@@ -75,8 +77,10 @@ addItemToMenu('Bagel and Lox', 9, 'Lorem ipsum dolor sit amet, consectetur adipi
 export const menuPage = () => {
     const contentDiv = document.querySelector('#content');
     const menuPageDiv = document.createElement('div');
+    menuPageDiv.id = 'menu-page';
 
     const menuTitleDiv = document.createElement('div');
+    menuTitleDiv.id = 'menu-title';
     const menuTitle = document.createElement('h1');
     menuTitle.textContent = "Menu";
     menuTitleDiv.appendChild(menuTitle);
@@ -88,6 +92,7 @@ export const menuPage = () => {
     pancakesTitle.innerHTML = "Build Your Own Pancake Stack <span>($17)</span>";
 
     const batterDiv = document.createElement('div');
+    batterDiv.id = 'batters';
     const batterTitle = document.createElement('h4');
     batterTitle.textContent = "Batter Options";
     const glutenOption = document.createElement('p');
@@ -100,7 +105,15 @@ export const menuPage = () => {
     });
     batterDiv.append(batterTitle, glutenOption, batterList);
 
+    const rightArrowDiv1 = document.createElement('div');
+    rightArrowDiv1.classList.add('arrow-div');
+    const arrowPic1 = document.createElement('img');
+    arrowPic1.classList.add('right-arrow');
+    arrowPic1.src = rightArrow;
+    rightArrowDiv1.appendChild(arrowPic1);
+
     const insidesDiv = document.createElement('div');
+    insidesDiv.id = 'insides;'
     const insidesTitle = document.createElement('h4');
     insidesTitle.textContent = "Insides Options";
     const insidesList = document.createElement('ul');
@@ -111,7 +124,15 @@ export const menuPage = () => {
     });
     insidesDiv.append(insidesTitle, insidesList);
 
+    const rightArrowDiv2 = document.createElement('div');
+    rightArrowDiv2.classList.add('arrow-div');
+    const arrowPic2 = document.createElement('img');
+    arrowPic2.classList.add('right-arrow');
+    arrowPic2.src = rightArrow;
+    rightArrowDiv2.appendChild(arrowPic2);
+
     const outsidesDiv = document.createElement('div');
+    outsidesDiv.id = 'outsides';
     const outsidesTitle = document.createElement('h4');
     outsidesTitle.textContent = "Outsides Options";
     const outsidesList = document.createElement('ul');
@@ -132,7 +153,7 @@ export const menuPage = () => {
     syrupDiv.append(syrupTitle, syrupList);
     outsidesDiv.append(outsidesTitle, outsidesList, syrupDiv);
     
-    pancakeDiv.append(pancakesTitle, batterDiv, insidesDiv, outsidesDiv);
+    pancakeDiv.append(pancakesTitle, batterDiv, rightArrowDiv1, insidesDiv, rightArrowDiv2, outsidesDiv);
 
     const omeletteDiv = document.createElement('div');
     omeletteDiv.id = 'omelettes';
@@ -166,6 +187,9 @@ export const menuPage = () => {
     });
     skilletDiv.append(skilletTitle, skilletList);
 
+    const moreDiv = document.createElement('div');
+    moreDiv.id = 'more';
+
     const otherDiv = document.createElement('div');
     otherDiv.id = 'other';
     const otherTitle = document.createElement('h3');
@@ -194,7 +218,9 @@ export const menuPage = () => {
     });
     sidesDiv.append(sidesTitle, sidesList);
 
-    menuPageDiv.append(menuTitleDiv, pancakeDiv, omeletteDiv, skilletDiv, otherDiv, sidesDiv);
+    moreDiv.append(otherDiv, sidesDiv);
+
+    menuPageDiv.append(menuTitleDiv, pancakeDiv, omeletteDiv, skilletDiv, moreDiv);
 
     contentDiv.appendChild(menuPageDiv);
 };
