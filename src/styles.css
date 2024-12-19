@@ -49,5 +49,8 @@ img {
 }
 
 #footer {
-    
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 2vh 20px;
 }

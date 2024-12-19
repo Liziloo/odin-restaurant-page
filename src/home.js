@@ -63,13 +63,9 @@ export const homepage = () => {
 
     const optionsDiv = document.createElement('div');
     const optionsText = document.createElement('p');
-    optionsText.innerHTML = "Pancakes not your thing? Don't worry, we have plenty of other offerings on our <span id='menu-link'>full menu</span>.";
+    optionsText.innerHTML = "Pancakes not your thing? Don't worry, we have plenty of other offerings on our full menu.";
     optionsDiv.appendChild(optionsText);
 
-    const footerDiv = document.createElement('div');
-    footerDiv.id = 'footer';
-    footerDiv.innerHTML = 'Image by <a href="https://pixabay.com/users/duckahouse-7364164/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941">DuckaHouse</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3943941">Pixabay</a>';
-
-    homePageDiv.append(homePicDiv, subheadingDiv, stepsDiv, optionsDiv, footerDiv);
+    homePageDiv.append(homePicDiv, subheadingDiv, stepsDiv, optionsDiv);
     contentDiv.appendChild(homePageDiv);
 };
