@@ -129,7 +129,6 @@ li {
 #pancakes {
     width: 100%;
     display: grid;
-    grid-template-columns: 5fr 1fr 5fr 1fr 10fr;
     gap: 20px;
 }
 
@@ -140,6 +139,7 @@ li {
 
 .arrow-div {
     padding: 30px 0;
+    max-width: 50px;
 }
 
 #outsides ul, #omelettes ul, #skillets ul {
@@ -162,6 +162,10 @@ li {
     width: 40%;
     font-size: 0.9rem;
     min-width: 200px;
+}
+
+#syrups li {
+    margin: 0;
 }
 
 #skillets {
