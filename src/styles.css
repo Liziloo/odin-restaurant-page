@@ -11,7 +11,7 @@
 header {
     position: sticky;
     display: grid;
-    justify-content: center;
+    justify-items: center;
     width: 100vw;
     top: 0;
     padding: 10px;
@@ -26,10 +26,13 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    max-width: 200px;
 }
+
 button {
     border-radius: 5px;
+    margin: 0 5px;
     padding: 1px 7px;
     background-color: var(--chocolate-cosmos);
     color: var(--light-fawn);
@@ -61,6 +64,7 @@ img {
 .step {
     width: 100%;
     text-align: center;
+    margin: 10px 0;
 }
 
 #footer {
