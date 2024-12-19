@@ -2,7 +2,7 @@ import rightArrow from './arrow-right-bold.svg';
 
 const batters = ['buttermilk', 'chocolate', 'strawberry', 'lemon ricotta', 'cinnamon swirl', 'current seasonal'];
 const insides = ['bacon', 'chocolate chips', 'blueberries', 'raspberries', 'cinnamon chips', 'peanut butter chips'];
-const outsides = ['homemade whipped cream', 'fresh strawberries', 'chocolate chips', 'berry compote', 'applesauce', 'creme brulee sauce', 'rainbow sprinkles', 'Jimmies (chocolate sprinkles)'];
+const outsides = ['homemade whipped cream', 'fresh strawberries', 'chocolate chips', 'berry compote', 'applesauce', 'crème brulée sauce', 'rainbow sprinkles', 'Jimmies (chocolate sprinkles)'];
 const syrups = ['maple', 'blueberry', 'boysenberry', 'chocolate', 'caramel', 'butterscotch', 'sugar-free maple'];
 
 const other = [];
@@ -60,7 +60,7 @@ function addItemToSides(item, price) {
     sides.push(newSide);
 };
 
-addItemToSides('One egg', 2);
+addItemToSides('one egg', 2);
 addItemToSides('bacon', 5);
 addItemToSides('sausage', 4);
 addItemToSides('goetta', 4);
@@ -96,6 +96,7 @@ export const menuPage = () => {
     const batterTitle = document.createElement('h4');
     batterTitle.textContent = "Batter Options";
     const glutenOption = document.createElement('p');
+    glutenOption.classList.add('note');
     glutenOption.textContent = "* All flavors also available gluten-free."
     const batterList = document.createElement('ul');
     batters.forEach ((element) => {
@@ -142,6 +143,7 @@ export const menuPage = () => {
         outsidesList.appendChild(outsidesOption);
     });
     const syrupDiv = document.createElement('div');
+    syrupDiv.id = 'syrups';
     const syrupTitle = document.createElement('h5');
     syrupTitle.textContent = 'Syrups';
     const syrupList = document.createElement('ul');
@@ -162,11 +164,13 @@ export const menuPage = () => {
     const omelettesList = document.createElement('ul');
     omelettes.forEach((element) => {
         const omeletteOption = document.createElement('li');
-        const omeletteName = document.createElement('h6');
+        const optionDiv = document.createElement('div');
+        const omeletteName = document.createElement('h5');
         omeletteName.textContent = element.name;
         const omeletteDescription = document.createElement('p');
         omeletteDescription.textContent = element.description;
-        omeletteOption.append(omeletteName, omeletteDescription);
+        optionDiv.append(omeletteName, omeletteDescription);
+        omeletteOption.appendChild(optionDiv);
         omelettesList.appendChild(omeletteOption);
     })
     omeletteDiv.append(omeletteTitle, omelettesList);
@@ -178,11 +182,13 @@ export const menuPage = () => {
     const skilletList = document.createElement('ul');
     skillets.forEach((element) => {
         const skilletOption = document.createElement('li');
-        const skilletName = document.createElement('h6');
+        const optionDiv = document.createElement('div');
+        const skilletName = document.createElement('h5');
         skilletName.textContent = element.name;
         const skilletDescription = document.createElement('p');
         skilletDescription.textContent = element.description;
-        skilletOption.append(skilletName, skilletDescription);
+        optionDiv.append(skilletName, skilletDescription);
+        skilletOption.appendChild(optionDiv);
         skilletList.appendChild(skilletOption);
     });
     skilletDiv.append(skilletTitle, skilletList);
@@ -197,7 +203,7 @@ export const menuPage = () => {
     const otherList = document.createElement('ul');
     other.forEach((element) => {
         const otherOption = document.createElement('li');
-        const otherName = document.createElement('h6');
+        const otherName = document.createElement('h5');
         otherName.innerHTML = `${element.item} <span>${element.price}`;
         const otherDescription = document.createElement('p');
         otherDescription.textContent = element.description;
