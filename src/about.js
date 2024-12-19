@@ -10,7 +10,7 @@ export const aboutPage = () => {
 
     const storyDiv = document.createElement('div');
     storyDiv.id = 'story';
-    const storyTitle = document.createElement('h2');
+    const storyTitle = document.createElement('h3');
     storyTitle.textContent = 'Our Story';
     const storyPara = document.createElement('p');
     storyPara.innerHTML = "Amet laoreet libero nostra porttitor fermentum. Dis felis purus congue condimentum eu parturient cubilia laoreet finibus. Feugiat aptent auctor bibendum; mollis nisl inceptos. Urna dolor cursus fames, fusce inceptos turpis praesent blandit nullam. Condimentum eleifend suscipit quam proin nibh ac. Suspendisse pellentesque augue non ultrices fusce rhoncus ac urna. Velit dictumst nascetur himenaeos odio laoreet ut. Sodales mus etiam rutrum sociosqu est nisi ornare."
@@ -18,7 +18,7 @@ export const aboutPage = () => {
 
     const contactDiv = document.createElement('div');
     contactDiv.id = 'contact';
-    const contactTitle = document.createElement('h2');
+    const contactTitle = document.createElement('h3');
     contactTitle.textContent = "Contact Us";
     const phoneDiv = document.createElement('div');
     phoneDiv.id = 'phone';

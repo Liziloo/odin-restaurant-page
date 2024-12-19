@@ -110,7 +110,7 @@ li {
     color: var(--fawn);
 }
 
-#menu-page {
+#menu-page, #about-page {
     display: grid;
     grid-template-columns: minmax(min-content, 1000px);
     justify-content: center;
@@ -184,4 +184,10 @@ li {
 
 #about-page {
     height: 100%;
+    text-align: center;
+}
+
+#about-page > div {
+    margin: 10px auto;
+    max-width: 800px;
 }
